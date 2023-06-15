@@ -1,0 +1,216 @@
+@font-face {
+  font-family: "Hanken Grotesk";
+  src: url(../fonts/HankenGrotesk-VariableFont_wght.ttf);
+}
+
+:root {
+  --font-family-default: "Hanken Grotesk";
+
+  --font-size-default: 1.125rem;
+  --font-size-heading-2: 1.5rem; 
+
+
+  --color-transparency: 0.05;
+
+  --primary-red: hsl(0, 100%, 67%);
+  --primary-red-transparent: hsla(0, 100%, 67%, var(--color-transparency));
+  --primary-orange: hsl(39, 100%, 56%);
+  --primary-orange-transparent: hsla(39, 100%, 56%, var(--color-transparency));
+  --primary-green: hsl(166, 100%, 37%);
+  --primary-green-transparent: hsla(166, 100%, 37%, var(--color-transparency));
+  --primary-blue: hsl(234, 85%, 45%);
+  --primary-blue-transparent: hsla(234, 85%, 45%, var(--color-transparency));
+
+
+  --gradient-background-purple: hsl(252, 100%, 67%);
+  --gradient-background-blue: hsl(241, 81%, 54%);
+  --gradient-cirle-purple: hsla(256, 72%, 46%, 1);
+  --gradient-cirle-gray: hsla(241, 72%, 46%, 0);
+
+
+  --neutral-white: hsl(0, 0%, 100%);
+  --neutral-pale-blue: hsl(222, 100%, 96%);
+  --neutral-lavender: hsl(241, 100%, 89%);
+  --neutral-gray-blue: hsl(224, 30%, 27%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family-default);
+  font-size: var(--font-size-default);
+  color: var(--neutral-white);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  display: flex;
+  border-radius: 32px;
+  box-shadow: 0 0 70px var(--neutral-pale-blue);
+}
+
+article {
+  width: 306px;
+  padding: 32px;
+  border-radius: 32px;  
+}
+
+button, a {
+  font-family: var(--font-family-default);
+  font-size: var(--font-size-default);
+  color: inherit;
+  border: none;
+}
+
+h2 {
+  font-size: var(--font-size-heading-2);
+}
+
+.light-grey {
+  color: var(--neutral-lavender);
+}
+
+.dark {
+  color: var(--neutral-gray-blue)
+}
+
+
+/* 
+===========================================================
+                          Results
+===========================================================
+*/
+
+.results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: 
+  linear-gradient(
+    var(--gradient-background-purple),
+    var(--gradient-background-blue)
+    );
+}
+
+.results > p {
+  margin-top: 16px;
+}
+
+.circle {
+  height: fit-content;
+  padding: 32px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background: 
+  linear-gradient(
+    var(--gradient-cirle-purple),
+    var(--gradient-cirle-gray)
+    );
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.circle span {
+  display: block;
+}
+
+.circle span:nth-of-type(1) {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+
+/* 
+===========================================================
+                          Summary
+===========================================================
+*/
+
+.summary {
+  --card-border-radius: 8px;
+}
+.stats {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-weight: 700;
+  margin: 32px 0;
+}
+
+.stats > div {
+  position: relative;
+}
+
+.border-corner {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+  border: 1px solid var(--neutral-lavender);
+  border-radius: var(--card-border-radius);
+}
+
+.background-white {
+  background-color:white;
+  border-radius: calc(var(--card-border-radius) + 1px);
+}
+
+.stats .content {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  border-radius: var(--card-border-radius);
+}
+
+.score {
+  margin-left: auto;
+}
+
+.reaction .content {
+  background-color: var(--primary-red-transparent);
+}
+
+.reaction .name {
+  color: var(--primary-red);
+}
+
+.memory .content {
+  background-color: var(--primary-orange-transparent);
+}
+
+.memory .name {
+  color: var(--primary-orange);
+}
+
+.verbal .content {
+  background-color: var(--primary-green-transparent);
+}
+
+.verbal .name {
+  color: var(--primary-green);
+}
+
+.visual .content {
+  background-color: var(--primary-blue-transparent);
+}
+
+.visual .name {
+  color: var(--primary-blue);
+}
+
+button {
+  width: 100%;
+  padding: 16px 0;
+  background-color: var(--neutral-gray-blue);
+  border-radius: 32px;
+}
