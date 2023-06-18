@@ -213,6 +213,7 @@ button {
   padding: 16px 0;
   background-color: var(--neutral-gray-blue);
   border-radius: 32px;
+  cursor: pointer;
 }
 
 button:hover {
