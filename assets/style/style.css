@@ -69,7 +69,7 @@ button, a {
   border: none;
 }
 
-h2 {
+h2, h1 {
   font-size: var(--font-size-heading-2);
 }
 
