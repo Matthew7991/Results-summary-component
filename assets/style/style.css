@@ -214,3 +214,26 @@ button {
   background-color: var(--neutral-gray-blue);
   border-radius: 32px;
 }
+
+button:hover {
+  background: 
+  linear-gradient(
+    var(--gradient-background-purple),
+    var(--gradient-background-blue)
+    );
+}
+
+@media screen and (max-width: 800px) {
+  section {
+    flex-direction: column;
+  }
+
+  article {
+    width: 100%;
+  }
+
+  .results {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+}
