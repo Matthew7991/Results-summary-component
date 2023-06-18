@@ -223,6 +223,14 @@ button:hover {
     );
 }
 
+button:active {
+  background: 
+  linear-gradient(
+    var(--gradient-background-purple),
+    var(--gradient-background-blue)
+    );
+}
+
 @media screen and (max-width: 800px) {
   section {
     flex-direction: column;
